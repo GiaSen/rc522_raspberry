@@ -135,14 +135,32 @@ class background:
         self.check.configure(text='''Bilancio''')
 
         self.bilanciotext = tk.Message(top)
-        self.bilanciotext.place(relx=0.28, rely=0.787, relheight=0.156
-                , relwidth=0.4)
+        self.bilanciotext.place(relx=0.39, rely=0.787, relheight=0.156
+                , relwidth=0.2)
         self.bilanciotext.configure(anchor="center", background="#494949")
         self.bilanciotext.configure(font="-family {Quicksand Medium} -size 100")
         self.bilanciotext.configure(foreground="#ffffff")
         self.money = tk.IntVar()
         self.bilanciotext.configure(textvariable=self.money)
         self.bilanciotext.configure(width=1000)
+
+        self.saldo = tk.Message(top)
+        self.saldo.place(relx=0.21, rely=0.787, relheight=0.156
+                , relwidth=0.22)
+        self.saldo.configure(background="#494949")
+        self.saldo.configure(font="-family {Quicksand Medium} -size 100")
+        self.saldo.configure(foreground="#ffffff")
+        self.saldo.configure(text=" Saldo:")
+        self.saldo.configure(width=1000)
+
+        self.euro = tk.Message(top)
+        self.euro.place(relx=0.55, rely=0.787, relheight=0.156
+                , relwidth=0.1)
+        self.euro.configure(background="#494949")
+        self.euro.configure(font="-family {Quicksand Medium} -size 100")
+        self.euro.configure(foreground="#ffffff")
+        self.euro.configure(text="€")
+        self.euro.configure(width=1000)
 
     def checkbalance(self):
         id, text = reader.read()
