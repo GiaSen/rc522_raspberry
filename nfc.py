@@ -40,13 +40,6 @@ def destroy_window():
     top_level.destroy()
     top_level = None
 
-try:
-    import ttk
-    py3 = False
-except ImportError:
-    import tkinter.ttk as ttk
-    py3 = True
-
 def vp_start_gui():
     '''Starting point when module is the main routine.'''
     global val, w, root
